@@ -1,0 +1,27 @@
+# config file in toml format https://toml.io/en/
+
+# user directory from qmc (active directory)
+# will be used to create a user "userdir\userid" 
+userdir = "wrkfast"
+
+# Export apps with or without data
+# true: Apps will be exported with data
+# values: true or false
+with_data = false
+
+# host + domain
+# since we use SSL an ip is not sufficient
+host = "mis.wrkfast.com"
+
+# optional value, for special use cases
+# if omitted $host will be used
+# [todo] see [link] for further explanations
+hdr_url = "srv5603.wrkfast.com"
+
+# in QMC -> Edit Virtual Proxy -> Identification -> "Prefix"
+proxy_prefix = "hdr"
+
+# in QMC -> Edit Virtual Proxy -> "Header authentication header name"
+# HeaderName: hdr-usr
+# Value: $(userdir)/ksapescz #
+proxy_user = "hdr-usr"
